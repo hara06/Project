@@ -731,91 +731,164 @@ opacity:0.8;
 
 }
 
-/* ================= MOBILE ================= */
+/* ================= FINAL MOBILE FIX ================= */
 
 @media(max-width:768px){
 
+.container{
+padding-left:12px;
+padding-right:12px;
+}
+
+/* HERO */
+
 .hero{
-padding:20px 15px;
+padding:20px 10px;
+text-align:left;
 }
 
 .title-big{
-font-size:24px;
+font-size:22px;
+line-height:1.3;
 }
 
 .subtitle{
-font-size:22px;
+font-size:18px;
 }
+
+.badge-soft{
+font-size:12px;
+padding:6px 12px;
+}
+
+/* LOGO */
 
 .logo-float{
+
 position:relative;
+
 top:0;
 right:0;
-margin:10px auto;
+
+margin:10px auto 10px auto;
+
 display:block;
-width:90px;
-height:90px;
+
+width:80px;
+height:80px;
+
 }
 
-/* info box jadi stack */
+/* GLASS */
+
+.glass{
+padding:12px;
+}
+
+/* INFO */
+
+.info-row{
+flex-direction:column;
+}
+
+.info-box{
+padding:10px;
+text-align:left;
+}
+
 .info-box:first-child{
 border-right:none;
 border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
-/* problem jadi 1 kolom */
+/* MAIN CARD */
+
+.main-card{
+padding:20px 12px;
+border-radius:18px;
+margin-top:20px;
+}
+
+/* CARD */
+
+.card-body-modern{
+padding:15px;
+font-size:14px;
+}
+
+/* PROBLEM */
 
 .problem-row{
 grid-template-columns:1fr;
+gap:12px;
 }
 
-/* 2 kolom jadi 1 */
+/* 2 COL */
 
 .two-col-section{
 grid-template-columns:1fr;
+gap:15px;
 }
 
-/* dasar hukum */
+/* LAW */
 
 .law-section{
 grid-template-columns:1fr;
 }
 
-/* main card padding kecil */
+/* DASH */
 
-.main-card{
-padding:25px 15px;
-border-radius:20px;
-}
-
-/* font kecil */
-
-.card-body-modern{
-font-size:14px;
+.dash-card{
+padding:12px;
 }
 
 .dash-card h3{
 font-size:16px;
 }
 
+/* CHART */
+
+.dash-chart img{
+width:100%;
+height:auto;
+}
+
+/* FOOTER */
+
+.footer{
+padding:20px;
+font-size:14px;
+}
+
 }
 
 
-/* ================= TABLET ================= */
+/* ================= SMALL PHONE ================= */
 
-@media(max-width:1024px){
+@media(max-width:480px){
 
-.problem-row{
-grid-template-columns:1fr 1fr;
+.title-big{
+font-size:20px;
 }
 
-.two-col-section{
-grid-template-columns:1fr;
+.subtitle{
+font-size:16px;
+}
+
+.logo-float{
+width:70px;
+height:70px;
+}
+
+.main-card{
+padding:15px 8px;
+}
+
+.card-body-modern{
+font-size:13px;
 }
 
 }
-
-
 
 /* ================= FOOTER ================= */
 
