@@ -910,6 +910,9 @@ gap:12px;
 .steps-grid{
 grid-template-columns:1fr;
 }
+.step-text{
+text-align:left;
+}
 .full{
 grid-column:1;
 }
@@ -992,6 +995,10 @@ height:75px;
 
 .card-body-modern{
 font-size:13px;
+}
+
+.step-text{
+text-align:left;
 }
 }
 
