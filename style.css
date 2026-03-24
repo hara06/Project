@@ -731,6 +731,90 @@ opacity:0.8;
 
 }
 
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.hero{
+padding:20px 15px;
+}
+
+.title-big{
+font-size:24px;
+}
+
+.subtitle{
+font-size:22px;
+}
+
+.logo-float{
+position:relative;
+top:0;
+right:0;
+margin:10px auto;
+display:block;
+width:90px;
+height:90px;
+}
+
+/* info box jadi stack */
+.info-box:first-child{
+border-right:none;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+/* problem jadi 1 kolom */
+
+.problem-row{
+grid-template-columns:1fr;
+}
+
+/* 2 kolom jadi 1 */
+
+.two-col-section{
+grid-template-columns:1fr;
+}
+
+/* dasar hukum */
+
+.law-section{
+grid-template-columns:1fr;
+}
+
+/* main card padding kecil */
+
+.main-card{
+padding:25px 15px;
+border-radius:20px;
+}
+
+/* font kecil */
+
+.card-body-modern{
+font-size:14px;
+}
+
+.dash-card h3{
+font-size:16px;
+}
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:1024px){
+
+.problem-row{
+grid-template-columns:1fr 1fr;
+}
+
+.two-col-section{
+grid-template-columns:1fr;
+}
+
+}
+
 
 
 /* ================= FOOTER ================= */
