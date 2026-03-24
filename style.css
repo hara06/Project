@@ -62,14 +62,24 @@ position:relative;
 
 /* logo */
 
-.logo-float{
+.logo-center{
 
 position:absolute;
-right:-5px;
-top:100px;
 
-width:150px;
-height:150px;
+left:50%;
+
+top:0;
+
+transform:translate(-50%, -50%);
+
+z-index:20;
+
+}
+
+.logo-center img{
+
+width:140px;
+height:140px;
 
 border-radius:50%;
 
@@ -77,7 +87,7 @@ background:white;
 padding:10px;
 
 box-shadow:
-0 20px 50px rgba(0,0,0,0.35),
+0 20px 40px rgba(0,0,0,0.3),
 0 0 25px rgba(56,189,248,0.5);
 
 }
@@ -139,14 +149,16 @@ opacity:0.9;
 
 background:#f8fafc;
 
-margin-top:40px;
+margin-top:60px;
 
 border-radius:40px;
 
-padding:50px 40px;
+padding:110px 40px 50px 40px;
 
 box-shadow:
 0 20px 60px rgba(0,0,0,0.25);
+
+position:relative;
 
 }
 
@@ -743,26 +755,33 @@ text-align:left;
 }
 
 .title-big{
-font-size:20px;
+font-size:22px;
 line-height:1.25;
 padding-right:80px;
 }
 
 .subtitle{
-font-size:18px;
+font-size:20px;
 padding-right:80px;
 }
 
-/* LOGO tetap di samping */
+.info-name{
+font-size:14px;
+font-weight:600;
+}
 
-.logo-float{
-position:absolute;
+.main-card{
 
-right:10px;
-top:55px;
+margin-top:40px;
+padding:90px 12px 30px 12px;
 
-width:80px;
-height:80px;
+}
+
+.logo-center img{
+
+width:90px;
+height:90px;
+
 }
 
 .badge-soft{
@@ -790,14 +809,6 @@ text-align:left;
 .info-box:first-child{
 border-right:none;
 border-bottom:1px solid rgba(255,255,255,0.2);
-}
-
-/* MAIN CARD */
-
-.main-card{
-padding:20px 12px;
-border-radius:18px;
-margin-top:20px;
 }
 
 /* CARD */
@@ -858,29 +869,35 @@ font-size:14px;
 @media(max-width:480px){
 
 .title-big{
-font-size:18px;
+font-size:22px;
 line-height:1.25;
 padding-right:80px;
 }
 
 .subtitle{
-font-size:16px;
+font-size:22px;
 padding-right:80px;
 }
 
-.logo-float{
-position:absolute;
 
-right:10px;
-top:55px;
+.logo-center{
 
-width:80px;
-height:80px;
+top:-40px;
+
 }
 
 
 .main-card{
-padding:15px 8px;
+
+padding-top:80px;
+
+}
+
+.logo-center img{
+
+width:75px;
+height:75px;
+
 }
 
 .card-body-modern{
