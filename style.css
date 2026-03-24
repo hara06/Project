@@ -855,13 +855,18 @@ height:90px;
 }
 
 .title-big{
-font-size:22px;
+font-size:30px;
 line-height:1.25;
 padding-right:80px;
 }
 
+.title-big br{
+display:none;
+}
+
+
 .subtitle{
-font-size:20px;
+font-size:28px;
 padding-right:80px;
 }
 
@@ -973,6 +978,11 @@ font-size:20px;
 line-height:1.25;
 padding-right:80px;
 }
+
+.title-big br{
+display:none;
+}
+
 
 .subtitle{
 font-size:20px;
