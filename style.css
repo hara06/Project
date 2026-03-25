@@ -515,9 +515,12 @@ margin-bottom:10px;
 .title-big{
 font-size:38px;
 font-weight:700;
-line-height:1.4;
-font-family:Poppins, sans-serif;
+line-height:1.25;
+padding-right:0;
+max-width:100%;
 margin-top:15px;
+text-align:left;
+font-family:Poppins, sans-serif;
 }
 
 .subtitle{
@@ -798,12 +801,6 @@ background:#9ca3af;
 border-bottom:none;
 }
 
-@media(min-width:1200px){
-.title-big br{
-display:inline;
-}
-}
-
 /* ================= MOBILE ================= */
 
 @media(max-width:768px){
@@ -828,14 +825,19 @@ height:90px;
 }
 
 .title-big{
-font-size:24px;
-line-height:1.25;
-padding-right:80px;
+font-size:26px;
+font-weight:700;
+max-width:100%;
+padding-right:0;
+}
+
+.title-big br{
+display: none;
 }
 
 .subtitle{
-font-size:22px;
-padding-right:80px;
+font-size:24px;
+padding-right:0;
 }
 
 .info-name{
@@ -954,18 +956,19 @@ font-size:13px;
 }
 
 .title-big{
-font-size:25px;
-line-height:1.25;
-padding-right:80px;
+font-size:26px;
+font-weight:700;
+max-width:100%;
+padding-right:0;
 }
 
 .title-big br{
-display:none;
+display: none;
 }
 
 .subtitle{
-font-size:22px;
-padding-right:80px;
+font-size:24px;
+padding-right:0;
 }
 
 .info-name{
