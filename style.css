@@ -523,6 +523,10 @@ text-align:left;
 font-family:Poppins, sans-serif;
 }
 
+.title-big br{
+display:none;
+}
+
 .subtitle{
 font-size:36px;
 font-weight:800;
@@ -801,6 +805,11 @@ background:#9ca3af;
 border-bottom:none;
 }
 
+@media(min-width:1200px){
+.title-big br{
+display:inline;
+}
+}
 /* ================= MOBILE ================= */
 
 @media(max-width:768px){
@@ -829,10 +838,6 @@ font-size:26px;
 font-weight:700;
 max-width:100%;
 padding-right:0;
-}
-
-.title-big br{
-display: none;
 }
 
 .subtitle{
@@ -960,10 +965,6 @@ font-size:26px;
 font-weight:700;
 max-width:100%;
 padding-right:0;
-}
-
-.title-big br{
-display: none;
 }
 
 .subtitle{
