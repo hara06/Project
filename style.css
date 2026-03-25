@@ -584,14 +584,26 @@ text-align:center;
 padding:10px;
 }
 
+.flow-img{
+max-width:750px;
+width:100%;
+height:auto;
+display:block;
+margin:auto;
+}
+
 /* ================= FLOW MODERN ================= */
 
-.flow-section.rekomendasi{ 
-text-align:center;
+.flow-section.rekomendasi{
+display:flex;
 color:#1e293b;
-margin-top:5px;
-margin-bottom:0;
+flex-direction:column;
+align-items:center;
+text-align:center;
+max-width:900px;
+margin:auto;
 }
+
 
 .flow-section{ 
 text-align:center;
@@ -809,7 +821,7 @@ height:90px;
 }
 
 .title-big{
-font-size:30px;
+font-size:26px;
 line-height:1.25;
 padding-right:80px;
 }
@@ -820,7 +832,7 @@ display:none;
 
 
 .subtitle{
-font-size:28px;
+font-size:24px;
 padding-right:80px;
 }
 
@@ -907,6 +919,24 @@ font-size:12px;
 grid-template-columns:1fr;
 }
 
+.section-soft{
+padding:25px 15px 20px 15px;
+}
+
+.flow-title{
+font-size:26px;
+}
+
+.flow-sub{
+font-size:14px;
+padding:0 5px;
+}
+
+.flow-img{
+max-width:100%;
+width:100%;
+}
+
 /* FOOTER */
 
 .footer{
@@ -922,7 +952,7 @@ font-size:13px;
 }
 
 .title-big{
-font-size:30px;
+font-size:26px;
 line-height:1.25;
 padding-right:80px;
 }
@@ -933,7 +963,7 @@ display:none;
 
 
 .subtitle{
-font-size:28px;
+font-size:24px;
 padding-right:80px;
 }
 
@@ -963,6 +993,24 @@ min-width:550px;
 .analysis-table th,
 .analysis-table td{
 font-size:12px;
+}
+
+.section-soft{
+padding:25px 15px 20px 15px;
+}
+
+.flow-title{
+font-size:26px;
+}
+
+.flow-sub{
+font-size:14px;
+padding:0 5px;
+}
+
+.flow-img{
+max-width:100%;
+width:100%;
 }
 
 }
