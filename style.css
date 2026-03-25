@@ -288,6 +288,17 @@ background:linear-gradient(
 #f8fafc,
 #eef2ff
 );
+padding:30px 40px 15px 40px;          
+box-shadow:
+0 10px 30px rgba(0,0,0,0.06);  
+}
+
+.section-soft.rekomendasi{
+background:linear-gradient(
+180deg,
+#f8fafc,
+#eef2ff
+);
 padding:30px 40px 0 40px;          
 box-shadow:
 0 10px 30px rgba(0,0,0,0.06);  
