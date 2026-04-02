@@ -1019,8 +1019,7 @@ border-radius:8px;
 }
 
 .highlight-label {
-    /* Gunakan clamp agar font fleksibel namun tetap satu baris */
-    font-size: clamp(14px, 2vw, 18px); 
+    font-size: clamp(14px, 4vw, 18px); /* Sedikit diperbesar range-nya untuk mobile */
     font-weight: 700;
     margin-bottom: 30px;
     color: #1e293b;
@@ -1029,7 +1028,11 @@ border-radius:8px;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    white-space: nowrap; 
+    
+    white-space: normal; 
+    flex-wrap: wrap;     
+    text-align: center;  
+    width: 100%;
 }
 
 .highlight-label i {
@@ -1097,18 +1100,15 @@ border-radius:8px;
 @media (max-width: 768px) {
     /* Memastikan label tetap SEJAJAR (Row) di Mobile */
     .highlight-label {
-        font-size: 13px;
-        display: flex !important;
-        flex-direction: row !important; 
-        align-items: center !important;
-        justify-content: center;
-        white-space: nowrap;
+        font-size: 14px;
+        white-space: normal !important; /* Pastikan tidak dipaksa satu baris */
+        flex-direction: row; /* Tetap row, tapi flex-wrap akan menangani jika penuh */
         gap: 8px;
+        padding: 0 10px; /* Tambah sedikit padding samping agar teks tidak nempel layar */
     }
 
     .highlight-label i {
-        margin-bottom: 0 !important;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .flow-img-premium {
@@ -1124,21 +1124,11 @@ border-radius:8px;
 
 /* Khusus layar sangat kecil, kecilkan font agar tidak overflow */
 @media (max-width: 480px) {
-    /* Memastikan label tetap SEJAJAR (Row) di Mobile */
     .highlight-label {
         font-size: 13px;
-        display: flex !important;
-        flex-direction: row !important; 
-        align-items: center !important;
-        justify-content: center;
-        white-space: nowrap;
-        gap: 8px;
+        gap: 5px;
     }
 
-    .highlight-label i {
-        margin-bottom: 0 !important;
-        font-size: 16px;
-    }
     .flow-img-premium {
         max-width: 100% !important; /* Paksa lebar penuh di HP */
         width: 100%;
