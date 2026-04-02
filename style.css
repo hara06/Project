@@ -1132,7 +1132,7 @@ border-radius:8px;
 }
 
 /* Khusus layar sangat kecil, kecilkan font agar tidak overflow */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     .highlight-label {
         font-size: 13px;
         gap: 5px;
@@ -1482,7 +1482,7 @@ font-size:14px;
 }
 
 /* ================= SMALL PHONE ================= */
-@media(max-width:480px){
+@media(max-width:640px){
 
 .info-name{
 font-size:14px;
