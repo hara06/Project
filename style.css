@@ -95,8 +95,9 @@ background:linear-gradient(
 
 .grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+    align-items: stretch;
 }
 
 .grid-3 {
@@ -420,6 +421,8 @@ width:100%;
 
 /* Styling List Masalah */
 .problem-item {
+    height: 100%;
+    min-height: 58px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1497,13 +1500,13 @@ width:100%;
 height:auto;
 }
 
-/* .framework-grid,
+.framework-grid,
 .compare-grid,
 .law-section,
 .grid-2,
 .grid-3{
 grid-template-columns:1fr;
-} */
+}
 
 .section-soft{
 padding:25px 15px 20px 15px;
@@ -1522,7 +1525,7 @@ padding:0 5px;
 
 .footer{
 padding:20px;
-font-size:14px;
+font-size:12px;
 }
 }
 
@@ -1560,13 +1563,18 @@ font-size:14px;
 padding:0 5px;
 }
 
-/* .framework-grid,
+.framework-grid,
 .compare-grid,
 .law-section,
 .grid-2,
 .grid-3{
 grid-template-columns:1fr;
-} */
+}
+
+.footer{
+padding:20px;
+font-size:12px;
+}
 
 }
 
