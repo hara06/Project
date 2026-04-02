@@ -947,6 +947,17 @@ border-radius:8px;
         font-size: 14px;
     }
 
+    .premium-table td::before,
+    .premium-table td:last-child::before {
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #94a3b8;
+        line-height: 1.2;
+    }
+
     /* Styling Label (Metrik, Pemda, Pusat) */
     .premium-table td:before {
         content: attr(data-label);
@@ -955,9 +966,7 @@ border-radius:8px;
         left: 0; 
         top: 15px;
         width: 100px;
-        font-weight: 700;
         color: #94a3b8;
-        font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 1px;
         
@@ -1001,8 +1010,6 @@ border-radius:8px;
         padding-bottom: 10px;
         border-bottom: 1px solid #e2e8f0;
 
-        font-size: 11px;
-        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1px;
         color: #94a3b8;
