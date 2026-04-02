@@ -1452,13 +1452,13 @@ width:100%;
 height:auto;
 }
 
-.framework-grid,
+/* .framework-grid,
 .compare-grid,
 .law-section,
 .grid-2,
 .grid-3{
 grid-template-columns:1fr;
-}
+} */
 
 .section-soft{
 padding:25px 15px 20px 15px;
@@ -1515,13 +1515,13 @@ font-size:14px;
 padding:0 5px;
 }
 
-.framework-grid,
+/* .framework-grid,
 .compare-grid,
 .law-section,
 .grid-2,
 .grid-3{
 grid-template-columns:1fr;
-}
+} */
 
 }
 
