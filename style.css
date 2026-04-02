@@ -1580,8 +1580,3 @@ transform:translateY(-3px);
 box-shadow:
 0 15px 35px rgba(0,0,0,0.3);
 }
-
-.row, .container, .hero-text-content {
-    max-width: 100%;
-    overflow-x: hidden; /* Menyembunyikan elemen yang keluar jalur */
-}
