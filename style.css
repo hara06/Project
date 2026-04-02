@@ -868,6 +868,7 @@ border-radius:8px;
     color: #475569;
     vertical-align: top;
 }
+
 .premium-table td:last-child {
         text-align: justify; /* Hanya analisis yang justify */
     }
@@ -877,16 +878,18 @@ border-radius:8px;
     transition: background-color 0.2s ease;
 }
 
-/* Kolom Highlight */
-.metric-name { 
-    font-weight: 700; 
-    color: #1e293b !important; 
-    text-align: left !important; /* MENGUNCI: Metrik tidak akan justify/renggang */
+.metric-name {
+    font-weight: 600;
+    font-size: inherit;
+    color: #1e293b !important;
+    text-align: left !important;
+    font-family: 'JetBrains Mono', monospace !important;
 }
 
 .style-font {
+    font-size: inherit;
     font-family: 'JetBrains Mono', monospace !important;
-    font-weight: 600 !important; 
+    font-weight: 600 !important;
 }
 
 /* ================= PRECISI TABLE SYSTEM ================= */
@@ -954,7 +957,7 @@ border-radius:8px;
         width: 100px;
         font-weight: 700;
         color: #94a3b8;
-        font-size: 11px;
+        font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 1px;
         
