@@ -831,14 +831,26 @@ border-radius:8px;
     margin-top: 2px; /* Jarak tipis antara judul dan keterangan */
 }
 
+/* Global Desktop Layout (992px ke atas) */
 .premium-table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed; /* WAJIB: Mengunci presisi kolom */
+}
+
+/* Proporsi Kolom yang Terkunci */
+.premium-table th:nth-child(1), .premium-table td:nth-child(1) { width: 20%; } 
+.premium-table th:nth-child(2), .premium-table td:nth-child(2) { width: 12%; text-align: center; }
+.premium-table th:nth-child(3), .premium-table td:nth-child(3) { width: 12%; text-align: center; }
+.premium-table th:nth-child(4), .premium-table td:nth-child(4) { width: 56%; }
+
+/* Tambahkan padding yang konsisten */
+.premium-table th, .premium-table td {
+    padding: 18px 15px;
+    word-wrap: break-word; /* Menghindari teks meluap */
 }
 
 .premium-table th {
-    text-align: left;
-    padding: 12px 25px;
     background: #ffffff;
     font-size: 12.5px;
     text-transform: uppercase;
@@ -848,13 +860,14 @@ border-radius:8px;
 }
 
 .premium-table td {
-    padding: 14px 25px;
     border-bottom: 1px solid #f8fafc;
     font-size: 14px;
     color: #475569;
     vertical-align: top;
-    text-align: left; /* Default rata kiri agar tidak renggang */
 }
+.premium-table td:last-child {
+        text-align: justify; /* Hanya analisis yang justify */
+    }
 
 .premium-table tbody tr:hover {
     background-color: #f8fafc; /* Biru sangat pucat */
@@ -875,94 +888,126 @@ border-radius:8px;
 
 /* ================= PRECISI TABLE SYSTEM ================= */
 
-/* 1. Desktop & Large Screens (Min 992px) */
-@media (min-width: 992px) {
-    .table-responsive-premium {
-        padding: 0 35px 30px; 
+@media (min-width: 769px) and (max-width: 1100px) {
+    .premium-table td, .premium-table th {
+        padding: 12px 10px !important;
+        font-size: 13px !important;
     }
-
-    .premium-table {
-        table-layout: fixed; /* Menjaga lebar kolom tetap stabil */
-    }
-
-    .premium-table td {
-        padding: 22px 15px;
-        line-height: 1.6;
-    }
-
-    /* PROPORSI KOLOM PRESISI */
-    .premium-table th:nth-child(1), .premium-table td:nth-child(1) { width: 18%; } /* Metrik */
-    .premium-table th:nth-child(2), .premium-table td:nth-child(2) { width: 12%; } /* Pemda */
-    .premium-table th:nth-child(3), .premium-table td:nth-child(3) { width: 12%; } /* Pusat */
-    .premium-table th:nth-child(4), .premium-table td:nth-child(4) { width: 58%; } /* Analisis */
-
-    /* Alignment Khusus Desktop */
-    .premium-table th:nth-child(2), .premium-table td:nth-child(2),
-    .premium-table th:nth-child(3), .premium-table td:nth-child(3) {
-        text-align: center !important; /* Angka rata tengah */
-    }
-
-    .premium-table td:last-child {
-        text-align: justify; /* Hanya analisis yang justify */
-    }
+    
+    /* Sesuaikan sedikit proporsi untuk layar tanggung */
+    .premium-table th:nth-child(1), .premium-table td:nth-child(1) { width: 22%; }
+    .premium-table th:nth-child(4), .premium-table td:nth-child(4) { width: 54%; }
 }
 
 /* 2. Responsive Mobile (Max 768px) */
 @media (max-width: 768px) {
-    .table-responsive-premium { padding: 15px; }
-
-    .premium-table, .premium-table thead, .premium-table tbody, 
-    .premium-table th, .premium-table td, .premium-table tr { 
-        display: block; 
+    .table-responsive-premium { 
+        padding: 10px; 
     }
 
-    .premium-table thead tr { display: none; }
+    .premium-table, 
+    .premium-table tbody, 
+    .premium-table tr, 
+    .premium-table td { 
+        display: block; 
+        width: 100%; 
+    }
+
+    .premium-table thead { 
+        display: none; 
+    }
 
     .premium-table tr {
         background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 20px;
+        border: 1px solid #f1f5f9;
+        border-radius: 25px; /* Radius lembut sesuai referensi */
         margin-bottom: 25px;
-        padding: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        padding: 20px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.02);
     }
 
-    .premium-table td { 
+    .premium-table td {
         border: none;
-        border-bottom: 1px dotted #f1f5f9; 
+        border-bottom: 1px solid #f8fafc;
         position: relative;
-        padding-left: 35% !important;
-        font-size: 13px;
-        text-align: left !important;
+        padding: 15px 5px 15px 110px !important; 
+        
         min-height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        display: block;
+        box-sizing: border-box;
+        white-space: nowrap; 
+        color: #1e293b;
+        font-weight: 600;
+        font-size: 14px;
     }
 
-    .premium-table td:before { 
+    /* Styling Label (Metrik, Pemda, Pusat) */
+    .premium-table td:before {
         content: attr(data-label);
         position: absolute;
-        left: 0;
+        /* Tetap di kiri */
+        left: 0; 
+        top: 15px;
+        width: 100px;
         font-weight: 700;
         color: #94a3b8;
-        font-size: 12px;
+        font-size: 11px;
         text-transform: uppercase;
+        letter-spacing: 1px;
+        
+        /* Pastikan label tetap rata kiri meskipun parent-nya rata kanan */
+        text-align: left; 
     }
 
-    /* Analisis Strategis di Mobile */
-    .premium-table td:last-child {
+    /* KHUSUS KOLOM ANALISIS (Baris Terakhir) */
+   .premium-table td:last-child {
+        position: relative;
+        padding: 35px 0 0 0 !important;
+        margin-top: 10px;
         border-bottom: none;
+        white-space: normal;
+
+        /* Supaya analisis benar-benar memenuhi lebar card */
+        width: 100%;
         display: block;
-        text-align: justify !important;
-        padding: 35px 10px 10px !important;
+        box-sizing: border-box;
+
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.7;
+        font-weight: 400;
+        color: #475569;
+
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
-    .premium-table td:last-child:before {
-        top: 15px;
+    .premium-table td:last-child::before {
+        content: attr(data-label);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        display: block;
         width: 100%;
-        border-bottom: 2px solid #f1f5f9;
-        padding-bottom: 5px;
+
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e2e8f0;
+
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #94a3b8;
+
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    /* Menghilangkan efek hover di mobile */
+    .premium-table tbody tr:hover {
+        background-color: transparent;
     }
 }
 
