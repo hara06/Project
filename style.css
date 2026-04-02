@@ -207,12 +207,17 @@ opacity:0.9;
 
 .main-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 52px; /* Ukuran jauh lebih besar untuk highlight */
+    font-size: 52px;
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
     margin-bottom: 15px;
     color: #ffffff;
+    
+    inline-size: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .text-highlight {
@@ -1574,4 +1579,9 @@ visibility:visible;
 transform:translateY(-3px);
 box-shadow:
 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.row, .container, .hero-text-content {
+    max-width: 100%;
+    overflow-x: hidden; /* Menyembunyikan elemen yang keluar jalur */
 }
