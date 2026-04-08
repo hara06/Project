@@ -264,6 +264,162 @@ opacity:0.9;
     }
 }
 
+/* ================= MODAL ================= */
+.pdf-modal {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.pdf-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ================= CONTAINER ================= */
+.modal-glass {
+    background: #ffffff;
+    width: 95%;
+    max-width: 1200px;
+    height: 92%;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    transform: translateY(20px) scale(0.98);
+    transition: all 0.3s ease;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+}
+
+.pdf-modal.show .modal-glass {
+    transform: translateY(0) scale(1);
+}
+
+/* ================= HEADER ================= */
+.modal-header {
+    padding: 16px 24px;
+    background: #0f172a;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Close button */
+.close-btn {
+    font-size: 24px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    background: #ef4444;
+}
+
+/* ================= BODY ================= */
+.modal-body {
+    flex: 1;
+    position: relative;
+    background: #1e293b;
+    padding: 20px;
+}
+
+/* Loader */
+#pdfLoader {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    background: #ffffff;
+    z-index: 10;
+}
+
+/* Iframe */
+.pdf-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #000;
+}
+
+/* ================= SCROLL LOCK ================= */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .modal-glass {
+        width: 95%;
+        height: 90%;
+        border-radius: 12px;
+    }
+}
+
+.policy-wrapper {
+    display: inline-flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+/* ================= BUTTON EYE ================= */
+.btn-preview-eye {
+background:rgba(255,255,255,0.15);
+padding:8px 18px;
+margin-bottom:10px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.btn-preview-eye:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Active click */
+.btn-preview-eye:active {
+    transform: scale(0.95);
+}
+
 /* ================= MAIN CARD ================= */
 .main-card{
 background:#f8fafc;
@@ -1453,6 +1609,11 @@ font-weight:600;
 .badge-soft{
 font-size:12px;
 padding:6px 12px;
+}
+
+.btn-preview-eye {
+padding:6px 12px;
+height: 30px;
 }
 
 /* GLASS */
