@@ -20,14 +20,40 @@ rel="stylesheet"
 
 <body>
 
-<!-- HERO -->
-<div class="container hero">
-    <div class="row align-items-start">
-        <div class="col-md-9">
-            <div class="badge-soft radius-md">
-                Policy Brief
-            </div>
+    <!-- HERO -->
+    <div class="container hero">
+        <div class="row align-items-start" >
+            <div class="col-md-9">
 
+                <div class="policy-wrapper">
+                    <div class="badge-soft radius-md">
+                        Policy Brief
+                    </div>
+                    <button class="btn-preview-eye" onclick="openPdfPreview()" title="Preview Dokumen">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                
+                <div id="pdfModal" class="pdf-modal">
+                    <div class="modal-glass">
+                        <div class="modal-header">
+                            <span>Preview Dokumen</span>
+                            <button onclick="closePdfPreview()" class="close-btn">&times;</button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <!-- Loader -->
+                            <div id="pdfLoader">Loading dokumen...</div>
+                            <iframe 
+                            src="https://drive.google.com/file/d/1bGz3w-2BJXDFmW26ak3dmPSb8UGQZo2O/preview"
+                            class="pdf-frame"
+                            allow="autoplay"
+                            onload="hideLoader()">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="hero-text-content">
                     <h1 class="main-title text-highlight">
                         Digital Treasury Coach</span>
@@ -55,9 +81,10 @@ rel="stylesheet"
             </div>
         </div>
     </div>
+
     
     <!-- SECTION -->
-     <div class="main-card radius-lg">
+    <div class="main-card radius-lg">
         
         <!-- LOGO TENGAH -->
          <div class="logo-center">
@@ -439,7 +466,7 @@ rel="stylesheet"
                     <div class="compare-grid grid-2">
                         <div class="compare-card left radius-lg shadow-soft grad-soft">
                             <div class="compare-head old">
-                                Dulu
+                                Eksisting
                             </div>
                             
                             <ul>
@@ -510,6 +537,32 @@ rel="stylesheet"
     document.getElementById('section-' + targetId).style.display = 'block';
     document.getElementById('line-' + targetId).classList.add('active');
     }
+
+    function openPdfPreview() {
+    document.getElementById("pdfModal").classList.add("show");
+    document.body.classList.add("modal-open");
+}
+
+function closePdfPreview() {
+    document.getElementById("pdfModal").classList.remove("show");
+    document.body.classList.remove("modal-open");
+}
+
+/* Loader hide */
+function hideLoader() {
+    const loader = document.getElementById("pdfLoader");
+    if (loader) {
+        loader.style.display = "none";
+    }
+}
+
+/* Klik luar modal untuk close */
+window.addEventListener("click", function(event) {
+    const modal = document.getElementById("pdfModal");
+    if (event.target === modal) {
+        closePdfPreview();
+    }
+});
 
 </script>
 
